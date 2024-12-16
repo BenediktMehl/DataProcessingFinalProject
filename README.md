@@ -143,7 +143,7 @@ The model is a general purpose model, which is why we need to tell it in the pro
 To process the response from the API we tell the model to wrapp the actuall content in a json object, so we can easily access the content. Those models tend to add first sentences like: "Here is a recipe for you: " or "I found a recipe for you: " which is why we need to remove those sentences from the response and wrap the actuall content in ```.
 The results sound very good, but if its really eatable in the end is a question of the random ingredients i guess.
 
-We compared that to the results of locally running a transfomer model by google (t5-small). The results here are not really doing what we want, because the model is not trained on this task. The results are more like a transalation from english to english than the answer to our problem.
+We compared that to the results of locally running a transfomer model by google (t5-small). The results here are not really doing what we want, because the model is not trained on this task. The results are more like a transalation from english to english than the answer to our problem. Also tried training of a local model on the data was tried, but not successful.
 
 
 
