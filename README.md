@@ -137,12 +137,13 @@ In general I still think that a mse of around 1.5 is not very good given that th
 ## The problem
 Cooking with Leftover Food - If there is leftover ingredients a user wants to enter the ingredients and get a meal and recipe for that meal.
 
-## Methodology
-Transformerbased local models vs groq
+This is done with a openSource model called llama from with the free API provider called Groq.
+The training is already done for this model so the most important part is to test different prompts to get the best results.
+The model is a general purpose model, which is why we need to tell it in the prompt what we are doing. 
+To process the response from the API we tell the model to wrapp the actuall content in a json object, so we can easily access the content. Those models tend to add first sentences like: "Here is a recipe for you: " or "I found a recipe for you: " which is why we need to remove those sentences from the response and wrap the actuall content in ```.
+The results sound very good, but if its really eatable in the end is a question of the random ingredients i guess.
 
-Groq provides easy and free to use API keys for their LLMs. 
-
-## Results
+We compared that to the results of locally running a transfomer model by google (t5-small). The results here are not really doing what we want, because the model is not trained on this task. The results are more like a transalation from english to english than the answer to our problem.
 
 
 
